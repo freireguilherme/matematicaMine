@@ -10,9 +10,15 @@ class StartMenu extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 50.0),
-              child: Text('MathMiner'),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 50.0),
+              child: Text(
+                'MathMiner',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText1
+                    ?.copyWith(fontFamily: 'Kurland', fontSize: 50.0),
+              ),
             ),
             ElevatedButton(
                 onPressed: () {
@@ -22,7 +28,13 @@ class StartMenu extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text('Play')),
+                child: Text(
+                  'Play',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      ?.copyWith(fontFamily: 'Kurland', fontSize: 25.0),
+                )),
             ElevatedButton(
                 onPressed: () {
                   // TODO navigate para Almanaque
