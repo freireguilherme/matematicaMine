@@ -1,7 +1,6 @@
 import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
-
-import 'main_game_page.dart';
+import 'package:mathmine/screens/start_menu.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,10 +14,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       title: 'MathMiner',
-      home: MainGamePage(),
+      home: const StartMenu(),
     );
   }
 }
